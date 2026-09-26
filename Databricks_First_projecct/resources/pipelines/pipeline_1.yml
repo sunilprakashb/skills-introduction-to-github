@@ -1,0 +1,15 @@
+resources:
+  pipelines:
+    pipeline_pipeline_1:
+      name: pipeline_1
+      libraries:
+        - glob:
+            include: ../../src/pipeline_1/transformations/**
+      schema: default
+      continuous: false
+      development: false
+      photon: true
+      channel: CURRENT
+      catalog: db_bootcamp
+      serverless: true
+      root_path: ../../src/pipeline_1
